@@ -1,0 +1,51 @@
+NODE
+NodeJS es una tecnología que se apoya en el motor de Javascript V8 para permitir la ejecución de programas hechos en Javascript en un ámbito independiente del navegador. 
+A veces se hace referencia a NodeJS como Javascript del lado del servidor, pero es mucho más. La característica más importante de NodeJS, y que ahora otra serie de lenguajes 
+están aplicando, es la de no ser bloqueante. Es decir, si durante la ejecución de un programa hay partes que necesitan un tiempo para producirse la respuesta, 
+NodeJS no detiene el hilo de ejecución del programa, esperando que esa parte acabe, sino que continúa procesando las siguientes instrucciones. Cuando el proceso lento termina, 
+entonces realiza las instrucciones que fueran definidas para realizar con los resultados recibidos.
+
+INSTALACIÓN
+En Windows, no hay más que:
+1)Ir a la web oficial: nodejs.org
+2)Descargar la versión correspondiente y seguir las instrucciones.
+3)Abrir un terminal (puede ser el integrado en el VSCode) y ejecutar: node -version
+
+MÓDULOS
+En NodeJS el código se organiza por medio de módulos. Son como los paquetes o librerías de otros lenguajes como Java. Por su parte, NPM es el nombre del gestor de paquetes 
+(node package manager) que utiliza Node JS. Si conoces los gestores de paquetes de Linux podrás hacerte una buena idea de lo que es npm, si no, pues simplemente entiéndelo como una 
+
+Javascript nativo no da soporte a los módulos. Esto es algo que se ha agregado en NodeJS y se realiza con la sentencia require(), que está inspirada en la variante propuesta por CommonJS.
+
+La instrucción require() recibe como parámetro el nombre del paquete que queremos incluir e inicia una búsqueda en el sistema de archivos, en la carpeta "node_modules" y sus hijos, 
+que contienen todos los módulos que podrían ser requeridosforma de administrar módulos que deseas tener instalados, distribuir los paquetes y agregar dependencias a tus programas:
+
+var http = require("http");
+
+Existen distintos módulos que están disponibles de manera predeterminada en cualquier proyecto NodeJS y que por tanto no necesitamos traernos previamente a local mediante el gestor 
+de paquetes npm. Esos toman el nombre de "Módulos nativos" y ejemplos de ellos tenemos el propio "http", "fs" para el acceso al sistema de archivos.
+
+También podemos escribir nuestros propios módulos y para ello usamos module.exports. Escribimos el código de nuestro módulo, con todas las funciones locales que queramos, luego hacemos 
+un module.exports = {} y entre las llaves colocamos todo aquello que queramos exportar:
+
+funcionalidad1 = (param1, para,2) => { // Instrucciones de la función 1 }
+funcionalidad2 = () => { // Instrucciones de la función 2 }
+
+module.exports = {
+    funcionalidad1Modulo: funcionalidad1,
+    funcionalidad2Modulo: funcionalidad2
+}
+
+Asumiendo que el archivo anterior se llame “archivo.js”, nosotros podriamos requerirlo más tarde en otro archivo.js de la siguiente manera:
+let funcionalidades = require('archivo.js)
+funcionalidades.funcionalidad1Modulo(valor1,valor2)
+
+NPM(Node Package Manager)
+Para invocar npm, lo hacemos a través de la línea de comandos del terminal. Para instalar un páquete/módulo de forma local:
+
+npm install nombrePaquete
+
+Instalará el paquete en la carpeta node_modules del proyecto (y la creará si no existe).
+Para instalar un páquete/módulo de forma global:
+
+npm install -g nombrePaquete
