@@ -12,5 +12,42 @@ TypeScript nos ofrece muchas de las utilidades que se necesitan en JavaScript pa
 
 INSTALACIÓN -> npm install -g typescript
 
-TRASPILAR A JS
-miArchivo.ts -> tsc miArchivo.ts -> miArchivo.js
+TSCONFIG.JSON => [ejercicio1]
+Archivo de configuración principal de typescript. Principales propiedades:
+target: indicamos que queremos que compile a código Javascript escrito con el estándar ES5, que es el que todos los navegadores comprenden, incluso los Internet Explorer más antiguos.
+outDir: indicamos el directorio donde se van a colocar los archivos Javascript, ".js", una vez transpilados.
+
+Para probar el transpilado de los archivos .ts a .js lanzamos el comando -> tsc -w (-w significa watcher, al hacer cambios en el código veremos como se recompila en tiempo real)
+Comprobaremos que se ha creado un .js por cada archivo .ts, y que se ha creado la carpeta /dist que es donde se servirá la aplicación.
+
+INTERFACES => [ejercicio2]
+Mecanismo de la programación orientada a objetos que trata de suplir la carencia de herencia múltiple. En TypeScript una interfaz puede definir propiedades, mientras que en otros lenguajes las interfaces 
+sólo definen métodos. Declaración:
+
+interface todoableInterface {
+    propp1: type;
+    prop2: type;
+    method1(): void;
+    ....
+}
+
+Para poder implementarla:
+
+class miClase implements todoableInterface {
+    propp1 = val1;
+    prop2 = val2;
+    method1() {
+        //Instrucciones del método
+    }
+}
+
+La interfaz provoca que sea necesario declarar todas las propiedades e implementar todos los métodos a la hora de definir la clase. En resumen, es como un contrato.
+
+GENÉRICOS => [ejercicio3]
+Son una especie de "plantilla" de código, mediante la cual podemos aplicar un tipo de datos determinado a varios puntos de nuestro código. Sirven para aprovechar código, sin tener que duplicarlo 
+por causa de cambios de tipo y evitando la necesidad de usar el tipo "any".
+Se indican entre "menores y mayores que", asignando un alias al tipo variable que se esté recibiendo. Luego podemos usar ese alias para definir el tipo.
+
+function miTipo<nuevoTipo>(val1: nuevoTipo): nuevoTipo {
+    //Instrucciones de mi nuevo tipo
+}
