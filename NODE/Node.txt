@@ -47,7 +47,7 @@ el mismo entorno de ejecución para JavaScript que Google Chrome utiliza.
 3)Node.js viene con muchos módulos útiles, de manera que no tienes que escribir todo de cero, como por ejemplo, algo que ponga un string a la consola.
 4)Node.js es en realidad dos cosas: un entorno de ejecución y una librería
 
-NPM(Node Package Manager)
+NPM(Node Package Manager) (Será transversal a todas las formaciones de ahora en adelante)
 Para invocar npm, lo hacemos a través de la línea de comandos del terminal. Para instalar un páquete/módulo de forma local:
 
 npm install nombrePaquete
