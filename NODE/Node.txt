@@ -3,7 +3,7 @@ NodeJS es una tecnología que se apoya en el motor de Javascript V8 para permiti
 A veces se hace referencia a NodeJS como Javascript del lado del servidor, pero es mucho más. La característica más importante de NodeJS, y que ahora otra serie de lenguajes 
 están aplicando, es la de no ser bloqueante. Es decir, si durante la ejecución de un programa hay partes que necesitan un tiempo para producirse la respuesta, 
 NodeJS no detiene el hilo de ejecución del programa, esperando que esa parte acabe, sino que continúa procesando las siguientes instrucciones. Cuando el proceso lento termina, 
-entonces realiza las instrucciones que fueran definidas para realizar con los resultados recibidos.
+entonces realiza las instrucciones que fueran definidas para realizar con los resultados recibidos. 
 
 INSTALACIÓN
 En Windows, no hay más que:
@@ -37,8 +37,15 @@ module.exports = {
 }
 
 Asumiendo que el archivo anterior se llame “archivo.js”, nosotros podriamos requerirlo más tarde en otro archivo.js de la siguiente manera:
-let funcionalidades = require('archivo.js)
+let funcionalidades = require('archivo.js')
 funcionalidades.funcionalidad1Modulo(valor1,valor2)
+
+RESUMEN
+1)Node.js realmente es sólo otro contexto: te permite correr código JavaScript en el backend, fuera del browser.
+2)Para ejecutar el código JavaScript que tu pretendes correr en el backend, este necesita ser interpretado y, bueno, ejecutado, Esto es lo que Node.js realiza, haciendo uso de la Maquina Virtual V8 de Google, 
+el mismo entorno de ejecución para JavaScript que Google Chrome utiliza.
+3)Node.js viene con muchos módulos útiles, de manera que no tienes que escribir todo de cero, como por ejemplo, algo que ponga un string a la consola.
+4)Node.js es en realidad dos cosas: un entorno de ejecución y una librería
 
 NPM(Node Package Manager)
 Para invocar npm, lo hacemos a través de la línea de comandos del terminal. Para instalar un páquete/módulo de forma local:
@@ -49,3 +56,5 @@ Instalará el paquete en la carpeta node_modules del proyecto (y la creará si n
 Para instalar un páquete/módulo de forma global:
 
 npm install -g nombrePaquete
+
+(Veremos una pequeña práctica en la siguiente lección, typescript)

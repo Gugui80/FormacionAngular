@@ -1,0 +1,16 @@
+DEFINICIÓN
+Es un lenguaje de programación de alto nivel que implementa muchos de los mecanismos más habituales de la programación orientada a objetos, pudiendo extraer grandes beneficios 
+que serán especialmente deseables en aplicaciones grandes, capaces de escalar correctamente durante todo su tiempo de mantenimiento. 
+Su característica fundamental es que compila en Javascript nativo, por lo que se puede usar en todo proyecto donde se esté usando Javascript. El navegador, o cualquier otra plataforma 
+donde se ejecuta Javascript, nunca llegará a enterarse que el código original estaba escrito en TypeScript, porque lo único que llegará a ejecutar es el Javascript resultante de la compilación.
+Nace con el objetivo de aportar a Javascript las herramientas y ventajas en el desarrollo con las que están acostumbrados desarrolladores de lenguajes más potentes como C# o Java.
+
+SUPERSET DE JS
+TypeScript es un Superset de Javascript: Los superset compilan en el lenguaje estándar, por lo que el desarrollador programa en aquel lenguaje expandido, pero luego su código 
+es "transpilado" (porque realmente no es una compilación a código máquina) para transformarlo en el lenguaje estándar, capaz de ser entendido en todas las plataformas.
+TypeScript nos ofrece muchas de las utilidades que se necesitan en JavaScript para poder convertirlo en un lenguaje escalable, a la altura de las necesidades más exigentes. 
+
+INSTALACIÓN -> npm install -g typescript
+
+TRASPILAR A JS
+miArchivo.ts -> tsc miArchivo.ts -> miArchivo.js
