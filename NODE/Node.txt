@@ -13,12 +13,12 @@ En Windows, no hay más que:
 
 MÓDULOS
 En NodeJS el código se organiza por medio de módulos. Son como los paquetes o librerías de otros lenguajes como Java. Por su parte, NPM es el nombre del gestor de paquetes 
-(node package manager) que utiliza Node JS. Si conoces los gestores de paquetes de Linux podrás hacerte una buena idea de lo que es npm, si no, pues simplemente entiéndelo como una 
+(node package manager) que utiliza NodeJS. Si conoces los gestores de paquetes de Linux podrás hacerte una buena idea de lo que es npm, si no, pues simplemente entiéndelo como una 
 
 Javascript nativo no da soporte a los módulos. Esto es algo que se ha agregado en NodeJS y se realiza con la sentencia require(), que está inspirada en la variante propuesta por CommonJS.
 
 La instrucción require() recibe como parámetro el nombre del paquete que queremos incluir e inicia una búsqueda en el sistema de archivos, en la carpeta "node_modules" y sus hijos, 
-que contienen todos los módulos que podrían ser requeridosforma de administrar módulos que deseas tener instalados, distribuir los paquetes y agregar dependencias a tus programas:
+que contienen todos los módulos que podrían ser requeridos, es la forma de administrar módulos que deseas tener instalados, distribuir los paquetes y agregar dependencias a tus programas:
 
 var http = require("http");
 
@@ -28,7 +28,7 @@ de paquetes npm. Esos toman el nombre de "Módulos nativos" y ejemplos de ellos 
 También podemos escribir nuestros propios módulos y para ello usamos module.exports. Escribimos el código de nuestro módulo, con todas las funciones locales que queramos, luego hacemos 
 un module.exports = {} y entre las llaves colocamos todo aquello que queramos exportar:
 
-funcionalidad1 = (param1, para,2) => { // Instrucciones de la función 1 }
+funcionalidad1 = (param1, param2) => { // Instrucciones de la función 1 }
 funcionalidad2 = () => { // Instrucciones de la función 2 }
 
 module.exports = {

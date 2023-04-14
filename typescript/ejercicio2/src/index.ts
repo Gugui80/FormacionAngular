@@ -1,2 +1,2 @@
-let persona1 = new persona();
+let persona1: persona = new persona();
 persona1.getEdad();

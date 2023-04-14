@@ -1,3 +1,4 @@
+//Los métodos  y atributos de la interfaz nunca se declaran con modificadores de tipo let, const...
 class persona implements personable {
     nombre: string = 'Juan';
     edad: number = 35;
@@ -8,6 +9,10 @@ class persona implements personable {
 
     getEdad(): void {
         console.log(this.edad);
+    }
+
+    constructor() {
+
     }
 
 }

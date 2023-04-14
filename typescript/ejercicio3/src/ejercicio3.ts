@@ -21,6 +21,7 @@ class formacionIgae {
     duracion: number;
 }
 
+
 let verificarObjetoIgae = miTipo(new formacionIgae());//Al poner el cursor sobre la variable vemos que ha inferido que es un objeto de tipo formacionIgae.
 
 /**
