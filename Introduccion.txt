@@ -1,0 +1,33 @@
+ANGULAR
+De ser una plataforma para la creación de Web Apps, Angular ha evolucionado como motor de una enorme cantidad de proyectos del ámbito empresarial y de ahí para aplicaciones 
+en la Web Mobile Híbrida, llevando la tecnología al límite de sus posibilidades. Está pensado para dar cabida a todos los usos dados por los desarrolladores, llevar a Javascript 
+a un nuevo nivel comparable a lenguajes más tradicionales, siendo además capaz de resolver de una manera adecuada las necesidades y problemas de la programación del lado del cliente.
+
+Angular promueve el uso de TypeScript a sus desarrolladores. El propio framework está desarrollado en TypeScript, un lenguaje que agrega las posibilidades de ES6 en adelante, 
+además de un tipado estático y ayudas durante la escritura del código, el refactoring, etc.
+
+COMPONENTES
+La arquitectura de una aplicación Angular se realiza mediante componentes. Los componentes son estancos, no se comunican con el padre a no ser que se haga explícitamente por 
+medio de los mecanismos disponibles, etc. Todo esto genera aplicaciones más mantenibles, donde se encapsula mejor la funcionalidad y cuyo funcionamiento es más previsible.
+
+REQUISITOS PARA INICIAR UN PROYECTO ANGULAR
+Node.js (ejecutar node -v en un terminal)
+npm (ejecutar npm -v en un terminal)
+Si no se dispone de estas herrmaientas, descargarlas desde -> https://nodejs.org/en/
+
+ANGULAR CLI
+Angular CLI (Command Line Interface) nos ahorrará escribir mucho código y nos permitirá partir de un esquema de aplicación avanzado y capaz de facilitar los flujos de desarrollo, 
+depuración, testing o deploy. Para instalarlo, ejecutar en un terminal:
+npm install -g @angular/cli
+
+APLICACIÓN DE PRÁCTICA ARCHETYPE-MRR
+1)Ejecutar el comando: ng new archetype-mrr, para arrancar un nuevo proyecto.
+
+2)El terminal nos plantea la siguiente cuestión: -> ? Would you like to add Angular routing? (y/N) 
+Le diremos que si, para que se configure la arquitectura de ficheros y librerías del routing de Angular, que veremos más adelante.
+
+3)El terminal nos plantea la siguiente cuestión: -> ? Which stylesheet format would you like to use?
+Optaremos por la opción SCSS, que es como trabajamos en el proyecyo del MRR.
+
+Con esto damos por iniciada la práctica1 de esta formación.
+
