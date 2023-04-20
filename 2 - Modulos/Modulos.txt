@@ -1,0 +1,22 @@
+DEFINICIÓN
+Son los elementos principales con los que podemos organizar el código de las aplicaciones en Angular.
+
+PARTES DE UN MÓDULO
+imports: con los imports que este módulo necesita. (Obligatorio)
+declarations: con los componentes, u otros artefactos que este module construye. (Obligatorio)
+exports: componentes que este módulo permite utilizar en el exterior. (No Obligatorio)
+providers: servicios que un módulo necesita para llevar a cabo sus fucniones. (No Obligatorio)
+
+@NgModule({
+  imports: [
+    CommonModule
+  ],
+  declarations: [],
+  exports: [],
+  providers:[]
+})
+
+ANGULAR CLI - ng generate module miModulo / ng g module miModulo
+
+GENERAR UN COMPONENTE INTERNO AL MÓDULO - ng generate component miModulo/miComponente -> Esto provoca que el componente se agregue automáticamente a la definición del módulo.
+

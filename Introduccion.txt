@@ -13,12 +13,13 @@ medio de los mecanismos disponibles, etc. Todo esto genera aplicaciones más man
 REQUISITOS PARA INICIAR UN PROYECTO ANGULAR
 Node.js (ejecutar node -v en un terminal)
 npm (ejecutar npm -v en un terminal)
-Si no se dispone de estas herrmaientas, descargarlas desde -> https://nodejs.org/en/
+Si no se dispone de estas herramientas, descargarlas desde -> https://nodejs.org/en/
 
 ANGULAR CLI
 Angular CLI (Command Line Interface) nos ahorrará escribir mucho código y nos permitirá partir de un esquema de aplicación avanzado y capaz de facilitar los flujos de desarrollo, 
 depuración, testing o deploy. Para instalarlo, ejecutar en un terminal:
-npm install -g @angular/cli
+npm install -g @angular/cli -> A partir de aquí puedo utilizar los comandos de tipo 'ng'
+Importante -> https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/get-executionpolicy?view=powershell-7.3
 
 APLICACIÓN DE PRÁCTICA ARCHETYPE-MRR
 1)Ejecutar el comando: ng new archetype-mrr, para arrancar un nuevo proyecto.

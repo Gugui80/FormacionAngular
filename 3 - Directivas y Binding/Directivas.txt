@@ -1,0 +1,22 @@
+DIRECTIVAS
+Se van a utilizar para solucionar necesidades específicas de manipulación del DOM y otros temas estructurales. Cuando van precedidas del carácter *, significa que tienen la
+capacidad de interacturar y modificar el DOM (lo que conocimos como azúcar sintáctico). Algunas directivas muy útiles:
+
+1)ngClass: Nos permite asignar cualquier clase CSS entre un grupo de posibilidades. Podemos pasarle como parámetro un array de clases, o un objeto con propiedades clave-valor.
+[ngClass] = "{object}", [ngClass] = ['val1', 'val2']
+2)ngFor: Nos permite iterar y repetir elementos dentro de la página. Dentro de su valor, generamos una variable local con un bucle del tipo of:
+*ngFor="let variable1 of iterable"
+3)ngIf: Nos permite llevar a cabo condiciones en la vista de la aplicación, evaluando como parámetro un booleano. El resultado de la condición es la creación o no, en el DOM, del elemento en cuestión.
+*ngIf="condicion"
+4)ngModel: Debe utilizarse en campos de formularios. Viene de lo que se conoce como el modelo en el MVC. El modelo trabaja con los datos, así que podemos entender que el enlace 
+creado con ngModel permite que desde la vista pueda usar un dato.
+[(ngModel)]="property"
+
+BINDING
+Aunque ya se vió en la introducción, en la parte de sintaxis de las vistas, vamos a ver más en profundidad:
+1)Interpolación de cadenas {{}}: Es un mecanismo de Angular de sustitución de una expresión por un valor de cadena en un template. 
+2)Binding a atributo o propiedad []: Sirve para asignar un valor a una propiedad de un elemento de un template, de un valor obtenido a través de una propiedad del componente, 
+de modo que si el estado del componente cambia, también cambie la propiedad del elemento asignada en el template.
+3)Doble binding [()]: Banana in box, que implementa la evolución del MVC a MVVM (lo que a día de hoy se conoce como programación reactiva)
+4)Eventos (): La sentencia a ejecutar como respuesta a un evento se conoce con el nombre de "statement" en la documentación de Angular. Un statement es la declaración del 
+comportamiento que debe realizarse al dispararse un evento.

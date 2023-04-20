@@ -1,0 +1,34 @@
+EVENTOS
+La sintaxis para declarar un código a ejecutar como respuesta a un evento ya fue tratada en el primer tema, Componentes: El evento en cuestión se coloca entre paréntesis y 
+luego hay que asignarle una sentencia a ejecutar como respuesta a ese evento. La sentencia a ejecutar como respuesta a un evento se conoce con el nombre de "statement". 
+
+Un statement es la declaración del comportamiento que debe realizarse al dispararse un evento.
+
+Los statements están pensados para modificar el estado -> Así como las expresiones nunca debían modificar el estado de la aplicación, estando prohibidas sentencias como la asignación, 
+los eventos hacen el camino contrario: están pensados para alterar las propiedades del componente, produciendo un método de comunicación desde las vistas (template) hacia su lógica.
+Operadores no permitidos en el statement de un evento:
+- El operador new
+- Operadores de incremento y decremento (++ y --)
+- Asignaciones con operaciones en un mismo paso (+= y similares)
+- Pipes
+
+OBJETO EVENT
+Al igual que en los eventos del DOM, los statements tienen disponible el contexto del componente, pudiendo acceder a las propiedades como si fueran variables, o a sus métodos:
+<button (click)="procesadorEvento(event)">EventEmitter</button>
+
+COMUNICACIÓN ENTRE COMPONENTES
+Tenemos 2 formas de comunicar datos entre componentes:
+1)Mediante servicios (que veremos en la lección 5)
+2)Atendiendo a la estructura de árbol de componentes en la aplicación, esa comunicación puede surgir de los padres a los hijos y de los hijos hacia los padres.
+
+2.1)De padres a hijos: Decorador @Input
+El paso de información de padres a hijos se realiza por medio de propiedades del componente. La información se bindea desde el template, usando los atributos de la etiqueta 
+del componente.
+@Input mivariable: MiTipo;
+
+2.2)De los hijos a los padres: Decorador @Output
+El paso de información de padres a hijos se realiza por medio de eventos: Cuando el componente hijo tiene un dato y quiere hacer llegar al padre, genera un evento que puede ser 
+capturado en el componente padre para realizar aquellas acciones que sean necesarias. Para ello instanciaremos un objeto de tipo EventEmitter:
+@Output mi variable: miTipo = new EventEmitter<miTipo>();
+
+A continuación, utilizaremos el método .emit(), que incorporan todas las instancias de EventEmitter, para escalar los datos que queramos transmitir al padre.

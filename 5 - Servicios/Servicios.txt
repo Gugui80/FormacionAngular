@@ -1,0 +1,39 @@
+DEFICINICIÓN
+Son proveedores de datos, que mantienen lógica de acceso a ellos y operativa relacionada con el negocio y las cosas que se hacen con los datos dentro de una aplicación. 
+Los servicios serán consumidos por los componentes, que delegarán en ellos la responsabilidad de acceder a la información y la realización de operaciones con los datos, para mantener 
+un código organizado y escalable.
+
+ANGULAR CLI - ng generate service miService / ng g service miService -> -> Esto NO provoca que el servicio se agregue automáticamente a la definición del módulo.
+
+@Injectable()
+export class miService {
+
+  constructor() { }
+
+}
+
+El decorador @injectable indica a Angular que la clase que se decora puede necesitar dependencias que puedan ser entregadas por inyección de depdendencias.
+
+INYECCIÓN DE SERVICIOS EN COMPONENTES
+En Angular la inyección de dependencias se realiza por medio del constructor. En el constructor de un componente podemos declarar cualquiera de los servicios que vamos a usar 
+y el framework se encargará de proporcionarlo, sin que tengamos que realizar nosotros ningún trabajo adicional.
+
+constructor(public/private miService: MiService) { }
+
+IMPORTANTE: Cuando TypeScript detecta el modificador de visibilidad "public" o "private" en el parámetro enviado al constructor, inmediatamente declara una propiedad en la clase 
+y le asigna el valor recibido en el constructor. Por tanto, esta declaración:
+
+export class ListadoUsuariosComponent {
+  constructor(public usuarioService: UsuarioService) { }
+}
+
+Sería equivalente a:
+
+export class ListadoUsuariosComponent {
+    usuarioService: UsuarioService;
+    constructor(public usuarioService: UsuarioService) {
+        this.usuarioService = usuarioService;
+    }
+}
+
+A partir de este momento, podemos utilizar toda la funcionalidad aportada por el servicio (atributos y métodos), tanto en nuestro modelo como en la vista del componente.

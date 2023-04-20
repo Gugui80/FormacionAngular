@@ -1,0 +1,37 @@
+DEFINICIÓN
+Contenedor donde solucionas una necesidad de tu aplicación. Una interfaz para interacción, un listado de datos, un formulario, etc. Hay 3 tipos:
+1) Componentes (como tal) -> Un componente es una directiva con un template. Habrá muchas en tu aplicación y resuelven necesidades del negocio.
+2) Directivas de atributos -> Cambian la apariencia o comportamiento de un element. Por ejemplo tenemos ngClass, que nos permite colocar una o más clases de CSS (atributo class) 
+en un elemento.
+3) Directivas estructurales -> Son las que realizan cambios en el DOM del documento, añadiendo, manipulando o quitando elementos (por ejemplo ngFor, que nos sirve para hacer una repetición).
+
+PARTES DE UN COMPONENTE:
+Un template: Lo que conocemos como "vista" en MVC, se escribe en HTML
+Una clase: Corresponde al controlador en MVC, se escribe en JS (TS)
+Una función decoradora: Es una especie de registro del componente y hace de "pegamento" entre el Javascript y el HTML.
+
+@Component({
+  selector: 'app-mi-componente',
+  templateUrl: 'app-mi-componente.component.html',
+  styleUrls: ['app-mi-componente.component.css']
+})
+
+DECORADOR: implementación de un patrón de diseño de software que en sí, sirve para extender una función mediante otra función, pero sin tocar aquella original, que se está extendiendo. 
+El decorador recibe una función como argumento (aquella que se quiere decorar) y devuelve esa función con alguna funcionalidad adicional. Le pasamos como argumento meta-datos del
+componente que queremos crear.
+
+ANGULAR CLI - ng generate component miComponente / ng g component miComponente 
+
+ÁRBOL DE COMPONENTES
+Una aplicación Angular se desarrolla a base de crear componentes. Generalmente tendrás un árbol de componentes que forman tu aplicación y cada persona lo podrá organizar de 
+su manera preferida. Siempre existirá un componente padre y a partir de ahí podrán colgar todas las ramas que sean necesarias para crear tu aplicación.
+
+SINTAXIS DE LAS VISTAS
+Herramientas disponibles para manejo de la vista:
+1){{Expresión}}: Es un volcado de cualquier información en el texto de la página, como contenido a cualquier etiqueta. La expresión es una declaración que Angular procesará y 
+sustituirá por su valor, pudiendo realizar pequeñas operaciones.
+2)[Binding a Propiedad]: Cualquier valor que podemos asignar por medio de un atributo del HTML. Ese elemento puede ser simplemente un atributo del HTML estándar, un atributo implementado 
+mediante el propio Angular 2 o un atributo personalizado, creado para un componente en específico. 
+3)[(Doble Binding)]: Es un enlace entre el modelo y la vista. Mediante un binding si un dato cambia en el modelo, ese cambio se representa en la vista. Pero además en Angular se introduce 
+el "doble binding" (banana in box), por el cual si un valor se modifica en la vista, también viaja hacia el modelo.
+4)(Evento): es un evento que ocurre y para el cual se pueden definir manejadores, que son funciones que se ejecutarán como respuesta a ese evento.
