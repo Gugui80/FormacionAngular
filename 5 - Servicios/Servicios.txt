@@ -37,3 +37,14 @@ export class ListadoUsuariosComponent {
 }
 
 A partir de este momento, podemos utilizar toda la funcionalidad aportada por el servicio (atributos y métodos), tanto en nuestro modelo como en la vista del componente.
+
+CONSEJOS DE ESTRUCTURACIÓN DE CÓDIGO EN SERVICIOS: VENTAJAS DE TS
+Utlizar interfaces y clases para la implementación de los servicios y el tipado de los objetos a devolver por los mismos, para aprovechar las ayudas de TypeScript en tiempo de desarrollo.
+A la hora de compilar la aplicación, para su ejecución en el navegador, también te ayudará TypeScript, especificando los errores que ha encontrado en el código, derivados por un uso 
+incorrecto de las variables y sus tipos.
+No será más pesado para el navegador, ni te alertará de problemas que se puedan producir, ya que éste solo ejecutará código Javascript. Sin embargo, lo cierto es que si se tipa 
+correctamente todo lo que estuvo en tu mano y el compilador no te alertó de ningún error, difícilmente se producirá un error por un tipo mal usado en tiempo de ejecución.
+
+CLASES VS INTERFACES - Depende de cómo se vayan a generar los datos:
+Es muy habitual usar simplemente interfaces, desprovistas de inicialización y funcionalidad, ya que esas partes es común que sean delegadas en los servicios. Pero en el caso 
+de usar clases, tus nuevos objetos serán creados con la palabra "new" y necesitarán una inicialización.
