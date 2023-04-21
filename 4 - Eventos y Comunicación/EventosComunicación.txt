@@ -14,7 +14,7 @@ Operadores no permitidos en el statement de un evento:
 
 OBJETO EVENT
 Al igual que en los eventos del DOM, los statements tienen disponible el contexto del componente, pudiendo acceder a las propiedades como si fueran variables, o a sus métodos:
-<button (click)="procesadorEvento(event)">EventEmitter</button>
+<button (click)="procesadorEvento($event)">EventEmitter</button>
 
 COMUNICACIÓN ENTRE COMPONENTES
 Tenemos 2 formas de comunicar datos entre componentes:

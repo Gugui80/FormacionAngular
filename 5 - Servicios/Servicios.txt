@@ -1,4 +1,4 @@
-DEFICINICIÓN
+DEFINICIÓN
 Son proveedores de datos, que mantienen lógica de acceso a ellos y operativa relacionada con el negocio y las cosas que se hacen con los datos dentro de una aplicación. 
 Los servicios serán consumidos por los componentes, que delegarán en ellos la responsabilidad de acceder a la información y la realización de operaciones con los datos, para mantener 
 un código organizado y escalable.
@@ -12,7 +12,7 @@ export class miService {
 
 }
 
-El decorador @injectable indica a Angular que la clase que se decora puede necesitar dependencias que puedan ser entregadas por inyección de depdendencias.
+El decorador @injectable indica a Angular que la clase que se decora puede necesitar dependencias que puedan ser entregadas por inyección de dependencias.
 
 INYECCIÓN DE SERVICIOS EN COMPONENTES
 En Angular la inyección de dependencias se realiza por medio del constructor. En el constructor de un componente podemos declarar cualquiera de los servicios que vamos a usar 

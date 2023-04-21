@@ -35,3 +35,5 @@ mediante el propio Angular 2 o un atributo personalizado, creado para un compone
 3)[(Doble Binding)]: Es un enlace entre el modelo y la vista. Mediante un binding si un dato cambia en el modelo, ese cambio se representa en la vista. Pero además en Angular se introduce 
 el "doble binding" (banana in box), por el cual si un valor se modifica en la vista, también viaja hacia el modelo.
 4)(Evento): es un evento que ocurre y para el cual se pueden definir manejadores, que son funciones que se ejecutarán como respuesta a ese evento.
+
+HOOKS CICLO DE VIDA DE UN COMPONENTE: https://medium.com/angular-chile/angular-componentes-y-sus-ciclos-de-vida-aa639e13a688
