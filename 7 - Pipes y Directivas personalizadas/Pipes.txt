@@ -1,0 +1,49 @@
+DEFINICIÓN
+Los pipes son una de las utilidades que nos ofrece Angular para realizar transformaciones de los datos, a la hora de mostrarlos en los templates de los componentes. Son muy útiles 
+en inmensas situaciones y usarlos es muy sencillo. Angular ya tiene incorporados algunos pipes de uso habitual (como el pipe Date o el pipe Json) que podemos implementar cómodamente para comenzar a experimentar.
+Para utilizarlo en la vista:
+
+<etiqueta>{{ miVariable | miPipe }}</etiqueta>
+
+Todo pipe tiene un método "transform", que recibe siempre el valor de entrada del pipe. Adicionalmente recibirá datos extra que el pipe necesite para operar.
+
+@Pipe({
+  name: 'nombre'
+})
+export class NombrePipe implements PipeTransform {
+
+  transform(value: unknown, ...args: unknown[]): unknown {
+    //sentencias a ejecutar en el transform
+  }
+
+}
+
+ENVIAR DATOS A LOS PIPES (utlizaremos de ejemplo el pipe date o el pipe json)
+<etiqueta>{{ miFecha | date:"dd/MM/yy" }}</etiqueta>
+
+ANGULAR CLI => ng generate pipe miPipe / ng g pipe miPipe
+
+DIRECTIVAS
+Las directivas son las funciones que se ejecutarán cada vez que el compilador Angular las encuentre. Las directivas angulares mejoran la capacidad de los elementos HTML al 
+adjuntar comportamientos personalizados al DOM. Las directivas angulares se clasifican en tres categorías:
+1)Directivas de atributo: son responsables de manipular la apariencia y el comportamiento de los elementos DOM. Podemos usar directivas de atributos para cambiar el estilo de los 
+elementos DOM. Estas directivas también se usan para ocultar o mostrar condicionalmente elementos DOM particulares. Angular proporciona muchas directivas de atributos integradas 
+como NgStyle, NgClass, etc. También podemos crear nuestras propias directivas de atributos personalizadas para la funcionalidad deseada.
+2)Directivas estructurales: son las encargadas de cambiar la estructura del DOM. Funcionan agregando o eliminando elementos del DOM, a diferencia de las directivas de atributos, 
+que solo cambian la apariencia y el comportamiento del elemento. El nombre de la Directiva estructural siempre comienza con un prefijo de asterisco (*), mientras que la Directiva de 
+atributos no contiene ningún prefijo. Las tres directivas estructurales integradas más populares que proporciona Angular son NgIf, NgFor y NgSwitch.
+3)Componentes: Los componentes son directivas con plantillas. La única diferencia entre los Componentes y los otros dos tipos de directivas es la Plantilla. Las directivas 
+estructurales y de atributos no tienen plantillas. Entonces, podemos decir que el Componente es una versión más limpia de la Directiva con una plantilla, que es más fácil de usar.
+
+DIRECTIVAS PERSONALIZADAS
+
+@Directive({
+  selector: '[miDirectiva]'
+})
+export class MiDirectivaDirective {
+
+  constructor() { }
+
+}
+
+ANGULAR CLI => ng generate directive miDirectiva / ng g directive miDirectiva

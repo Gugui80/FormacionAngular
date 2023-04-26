@@ -24,11 +24,11 @@ Tenemos 2 formas de comunicar datos entre componentes:
 2.1)De padres a hijos: Decorador @Input
 El paso de información de padres a hijos se realiza por medio de propiedades del componente. La información se bindea desde el template, usando los atributos de la etiqueta 
 del componente.
-@Input mivariable: MiTipo;
+@Input() mivariable: MiTipo;
 
 2.2)De los hijos a los padres: Decorador @Output
 El paso de información de padres a hijos se realiza por medio de eventos: Cuando el componente hijo tiene un dato y quiere hacer llegar al padre, genera un evento que puede ser 
 capturado en el componente padre para realizar aquellas acciones que sean necesarias. Para ello instanciaremos un objeto de tipo EventEmitter:
-@Output mi variable: miTipo = new EventEmitter<miTipo>();
+@Output() miVariable = new EventEmitter<miTipo>();
 
 A continuación, utilizaremos el método .emit(), que incorporan todas las instancias de EventEmitter, para escalar los datos que queramos transmitir al padre.

@@ -10,13 +10,20 @@ import { UsuariosManagerService } from '../../services/usuarios-manager.service'
 export class AltaUsuarioComponent implements OnInit {
 
   nuevoUsuario: Usuario;
+  listadoTipologiasUsuarios: TipologiaUsuario[];
 
-  constructor(public usuariosManagerService: UsuariosManagerService) { 
+  constructor(
+    public usuariosManagerService: UsuariosManagerService
+    ) { 
     this.nuevoUsuario = this.usuariosManagerService.nuevoUsuario();
+    this.listadoTipologiasUsuarios = this.usuariosManagerService.getTipologias();
   }
 
   ngOnInit(): void {
-    console.log(this.nuevoUsuario)
   }
-  //[(ngModel)]=""s
+
+  altaUsuario() {
+    this.usuariosManagerService.agregarUsuario(this.nuevoUsuario);
+    this.nuevoUsuario = this.usuariosManagerService.nuevoUsuario()
+  }
 }

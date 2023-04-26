@@ -1,19 +1,22 @@
 <h3>Alta de usuarios en IGAE</h3>
 <p>
     <span>Nombre:</span>
-    <input type="text" >
+    <input type="text" [(ngModel)]="nuevoUsuario.nombre">
 </p>
 <p>
     <span>DNI:</span>
-    <input type="text" >
+    <input type="text" [(ngModel)]="nuevoUsuario.dni">
 </p>
 <p>
     <span>Dirección</span>
-    <input type="text">
+    <input type="text" [(ngModel)]="nuevoUsuario.direccion">
 </p>
 <p>
     <span>Tipo de usuario:</span>
-    <select>
-
+    <select [(ngModel)]="nuevoUsuario.tipo">
+        <option *ngFor="let tipoUsuarios of listadoTipologiasUsuarios">{{tipoUsuarios.nombreTipologia}}</option>
     </select>
+</p>
+<p>
+    <button (click)="altaUsuario()">Guardar datos de usuario</button>
 </p>

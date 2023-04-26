@@ -1,1 +1,12 @@
-<p>listado-usuarios works!</p>
+<h3>Listado de usuarios en IGAE</h3>
+<div *ngIf="listadoUsuariosDisponibles.length === 0">
+    <p>Ningún usuario registrado</p>
+</div>
+<div>
+    <article *ngFor="let usuario of listadoUsuariosDisponibles">
+        <span>Usuario: {{ usuario.nombre }}, </span>
+        <span>Dni: {{ usuario.dni }}, </span>
+        <span>Dirección: {{ usuario.direccion }}, </span>
+        <span>Tipología: {{ usuario.tipo }}</span>
+    </article>
+</div>

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AltaUsuarioComponent } from './components/alta-usuario/alta-usuario.component';
 import { ListadoUsuariosComponent } from './components/listado-usuarios/listado-usuarios.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,8 @@ import { ListadoUsuariosComponent } from './components/listado-usuarios/listado-
     ListadoUsuariosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     AltaUsuarioComponent,
