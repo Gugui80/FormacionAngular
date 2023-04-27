@@ -1,0 +1,57 @@
+INTRODUCCIÓN "HISTÓRICA" A LOS OBSERVABLES
+https://desarrolloweb.com/articulos/introduccion-teorica-observables-angular.html
+
+PROGRAMACIÓN "REACTIVA"
+La programación reactiva trata de la programación con flujos de datos (data stream) de manera asíncrona.
+Un Observable es un mecanismo creado para representar flujos de datos. De esta manera no debemos pensar en arrays, eventos de ratón, llamadas http al servidor… separados, 
+sino en algo que los agrupa a todos, el Observable.
+Cuando queremos trabajar utilizando programación reactiva con un tipo de dato concreto (por ejemplo, un array), habrá un método para poder transformar dicho dato en Observable y 
+poder trabajar con él de esta manera.
+
+DEFINICIÓN
+Un observable es un objeto con un método subscribe que toma como parámetro un observador y nos retorna una suscripción. El observador se suscribe al observable y cada vez que 
+el observable emite un valor, el observador es notificado. La suscripción que nos retorna el método subscribe, posee un método llamado unsubscribe que podemos llamar cuando deseamos 
+terminar la relación entre observable y observador. Las interfaces a las que se adhiere son:
+
+interface Observable {
+  subscribe(observer: Observer): Subscription
+}
+interface Observer {
+  next(v: any): void;
+  error(e: Error): void;
+  complete(): void;
+}
+interface Subscription {
+  unsubscribe(): void;
+}
+
+RXJS
+RxJS combina patrones de diseño de software como el Patrón del Observador, el Patrón del Iterador y conceptos de programación funcional utilizando colecciones para modelar 
+una forma ideal de manejar secuencias de eventos. Los tres grandes focos de dificultad al aprender RxJS son los siguientes:
+1)La librería acuña muchos conceptos con los que no estamos tan familiarizados al hacer programación proactiva (tradicional).
+2)La programación reactiva se ocupa de modelar relaciones entre eventos a través del tiempo. Cada vez que involucramos la variable tiempo en nuestro código implica incremento en complejidad.
+3)Al igual que el objeto Array en JS, RxJS cuenta con una gran cantidad de operadores y funciones, por lo que puede parecer complicado al principio.
+
+OPERADORES (Los más utilizados. Para ver la lista completa : https://www.learnrxjs.io/learn-rxjs/operators)
+Son funciones que nos permiten llevar a cabo operaciones con los observables. 2 tipos principales:
+
+OPERADORES DE CREACIÓN DE OBSERVABLES
+Estos operadores pueden llamarse como si fuesen funciones independientes, para crear un Observable
+1)of(dato) : Desde un dato
+2)from(array[]) : Desde un array
+3)interval(number) : Desde un contador periódico.
+4)formEvent(DomElement, event) : Desde un evento del DOM.
+5)Desde una petición AJAX/REST.
+6)Observable.create((emitter) => {//Instrucciones a ejecutar}) : Desde un Observable personalizado.
+
+OPERADORES DE TUBERÍA(PIPE)
+Los operadores pipe se utilizan mediante la sintaxis : observableInstance.pipe(operator(), operator()...). Está cadena de operadores no modifican la instancia del observable, si no que
+devuelven un observable nuevo, cuya lógica de suscripción está basada en la del observable original. Tipos:
+1)pipe() : Es un método de los Observables que me permite encadenarle operadores.
+2)map() : Permite transformar los datos de entrada.
+3)startWith() : Permite añadir un evento o secuencia de eventos al inicio de flujo de datos
+4)tap(): No es tanto un efecto pensado para alterar el flujo de datos, sino para facilitar efectos colaterales. 
+5)switchMap() : Remplaza el flujo actual por los eventos emitidos por un nuevo observable, y el anterior subscripcion la cancela.
+6)mergeMap() : Se utiliza mejor cuando desea subscribrse al observable interno.
+7)ConcatMap() : Este operador se utiliza cuando se quiere manejar de forma ordenada las respuesta de las subscripciones internas.
+8)ForkJoin() : El operador se subscribirá a cada Observable, una vez reciba un valor de todos los observables.
