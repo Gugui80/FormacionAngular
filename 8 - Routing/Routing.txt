@@ -1,0 +1,44 @@
+CONCEPTO DE ROUTING
+En las aplicaciones Angular sólo tenemos una página, el index.html y toda la acción se desarrolla dentro de esa página. En Angular lo común es que el index sólo tenga un 
+componente en su BODY y realmente toda la acción se desarrollará en ese componente. Todas las "páginas" (pantallas o vistas) del sitio web se mostrarán sobre ese índex, 
+intercambiando el componente que se esté visualizando en cada momento. Todo esto acuña el concepto, ya visto, de aplicaciones SPA.
+Para facilitar la navegación por un sitio donde realmente sólo hay un index, existe lo que llamamos el sistema de routing, que tiene el objetivo de permitir que en el sitio web 
+haya rutas internas, respondiendo a rutas "virtuales" como las que existen en los sitios tradicionales. Utilidades:
+- Permite que la aplicación responda a rutas internas. Es decir, no hace falta entrar siempre en la pantalla principal de la aplicación y navegar hasta la pantalla que 
+queremos ver realmente.
+ - Permite que el usuario pueda usar el historial de navegación, yendo hacia atrás y hacia adelante con el navegador para volver a una de las pantallas de aplicación que 
+estaba viendo antes.
+
+ELEMENTOS DEL RUTING EN ANGULAR
+1)El módulo del sistema de rutas: llamado RouterModule.
+2)Rutas de la aplicación: es un array con un listado de rutas que nuestra aplicación soportará.
+3)Enlaces de navegación: son enlaces HTML en los que incluiremos una directiva para indicar que deben funcionar usando el sistema de routing.
+4)Contenedor: donde colocar las pantallas de cada ruta. Cada pantalla será representada por un componente.
+
+Archivo app-routing.module:
+- RouterModule -> Es el módulo donde está el sistema de rutas, por tanto contiene el código del propio sistema de rutas.
+- Routes -> Es una declaración de un de tipo, que corresponde con un array de objetos Route. Los objetos Route están declarados por medio de una interfaz en el sistema de routing. 
+Esta interfaz sirve para que en la declaración de tus rutas coloques solamente aquellos valores que realmente son posibles de colocar. Si no lo haces así, el compilador de 
+TypeScript te ayudará mostrando los correspondientes errores en tiempo de desarrollo.
+
+Para que el sistema de routing de Angular funcione correctamente, hay que colocar su contenedor en la aplicación, mediante la directiva: <router-outlet></router-outlet>
+
+FORMAS DE NAVEGAR A LAS URL DEL ROUTING
+1)Navegando a través del buscador del navegador.
+2)Utilizando la propiedad: routerLink="/miRuta" de los elementos HTML
+
+ROUTERLINKACTIVE
+Es una directiva que nos permite aplicar una clase dinámicamente, dependiendo de si un enlace determinado tiene su ruta activa. Se puede aplicar en el contenedor del enlace, si es necesario.
+Se puede configurar median la propiedad: routerLinkActiveOptions, y su atributo "exact".
+
+PASO DE PARÁMETROS A LA RUTA
+Para pasar parámetros a la ruta activa: 
+1)Utilizando el operador ":" en el path -> { path: 'miRuta/:miParametro', component: miComponente }
+2)Utilando sintaxis array en el routerLink -> <a [routerLink]="['/miRuta', miParametro1, miParametro2 ...]">
+
+RECEPCIÓN DE PARÁMETROS
+Recibimos parámetros mediante el objeto ActivatedRoute, de angular-router, e inyéctandolo en el constructor:
+
+import { ActivatedRoute, Params } from '@angular/router';
+
+constructor(private rutaActiva: ActivatedRoute) { }

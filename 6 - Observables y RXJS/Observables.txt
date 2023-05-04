@@ -25,6 +25,12 @@ interface Subscription {
   unsubscribe(): void;
 }
 
+CONCEPTOS
+Observable: El flujo de datos, una colección de eventos que se pueden emitir en algún momento.
+Observer: Un objeto que escucha el flujo de datos y puede actuar sobre los valores que éste emite.
+Subscription: Representa la ejecución de un observable y permite cancelarla.
+Operador: Función para manipular los eventos siguiendo los principios de la programación funcional.
+
 RXJS
 RxJS combina patrones de diseño de software como el Patrón del Observador, el Patrón del Iterador y conceptos de programación funcional utilizando colecciones para modelar 
 una forma ideal de manejar secuencias de eventos. Los tres grandes focos de dificultad al aprender RxJS son los siguientes:
@@ -36,22 +42,26 @@ OPERADORES (Los más utilizados. Para ver la lista completa : https://www.learnr
 Son funciones que nos permiten llevar a cabo operaciones con los observables. 2 tipos principales:
 
 OPERADORES DE CREACIÓN DE OBSERVABLES
-Estos operadores pueden llamarse como si fuesen funciones independientes, para crear un Observable
+Estos operadores pueden llamarse como si fuesen funciones independientes, y sirven para crear un Observable:
 1)of(dato) : Desde un dato
 2)from(array[]) : Desde un array
 3)interval(number) : Desde un contador periódico.
-4)formEvent(DomElement, event) : Desde un evento del DOM.
-5)Desde una petición AJAX/REST.
+4)fromEvent(DomElement, event) : Desde un evento del DOM.
+5)Desde una petición AJAX/REST (Lo veremos con el paquete HttpClient de angular).
 6)Observable.create((emitter) => {//Instrucciones a ejecutar}) : Desde un Observable personalizado.
 
 OPERADORES DE TUBERÍA(PIPE)
 Los operadores pipe se utilizan mediante la sintaxis : observableInstance.pipe(operator(), operator()...). Está cadena de operadores no modifican la instancia del observable, si no que
 devuelven un observable nuevo, cuya lógica de suscripción está basada en la del observable original. Tipos:
-1)pipe() : Es un método de los Observables que me permite encadenarle operadores.
+1)pipe() : Es un método de los Observables que me permite encadenar operadores, pudiendo combinar múltiples funciones en una sola.
 2)map() : Permite transformar los datos de entrada.
-3)startWith() : Permite añadir un evento o secuencia de eventos al inicio de flujo de datos
-4)tap(): No es tanto un efecto pensado para alterar el flujo de datos, sino para facilitar efectos colaterales. 
-5)switchMap() : Remplaza el flujo actual por los eventos emitidos por un nuevo observable, y el anterior subscripcion la cancela.
-6)mergeMap() : Se utiliza mejor cuando desea subscribrse al observable interno.
-7)ConcatMap() : Este operador se utiliza cuando se quiere manejar de forma ordenada las respuesta de las subscripciones internas.
-8)ForkJoin() : El operador se subscribirá a cada Observable, una vez reciba un valor de todos los observables.
+3)filter() : Nos devuelve un observable con el filtrado de las respuesta.
+4)startWith() : Permite añadir un evento o secuencia de eventos al inicio de flujo de datos
+5)tap() : No es tanto un efecto pensado para alterar el flujo de datos, sino para facilitar efectos colaterales. 
+6)switchMap() : Remplaza el flujo actual por los eventos emitidos por un nuevo observable, y cancela la anterior subscripcion.
+7)mergeMap() : Se utiliza mejor cuando desea subscribrse al observable interno.
+8)ConcatMap() : Este operador se utiliza cuando se quiere manejar de forma ordenada las respuesta de las subscripciones internas.
+9)ForkJoin() : El operador se subscribirá a cada Observable, una vez reciba un valor de todos los observables.
+
+HTTP -> https://angular.io/api/common/http/HttpClient
+Nos permite realizar comunicaciones http asíncronas en Angular.
