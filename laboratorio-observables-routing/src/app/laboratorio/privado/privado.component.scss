@@ -1,0 +1,24 @@
+.privada {
+    background-color: aquamarine;
+}
+
+.publica {
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mostrar-div-cantoso {
+    background-color: blueviolet;
+}
+
+.mostrar-div-soseras {
+    background-color: cadetblue;
+}
+
+#tareas li {
+    list-style: none;
+    cursor: pointer;
+    &:hover {
+        background-color: chartreuse;
+    }
+}

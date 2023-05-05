@@ -1,0 +1,62 @@
+[
+    {
+        "displayName": "PLAN DE RECUPERACIÓN",
+        "disabled": false,
+        "iconName": "add_circle_outline",
+        "route": null,
+        "children": [
+          {
+            "displayName": "COMPONENTES",
+            "disabled": false,
+            "iconName": "",
+            "route": null,
+            "children": [
+              {
+                "displayName": "Datos generales",
+                "disabled": false,
+                "iconName": "format_list_bulleted",
+                "route": "/plan-recuperacion/componentes"
+              }
+            ]
+          },
+          {
+            "displayName": "MEDIDAS",
+            "disabled": false,
+            "iconName": "",
+            "route": null,
+            "children": [
+              {
+                "displayName": "Datos generales",
+                "disabled": false,
+                "iconName": "format_list_bulleted",
+                "route": "/plan-recuperacion/medidas"
+              },
+              {
+                "displayName": "Recursos económicos",
+                "disabled": false,
+                "iconName": "format_list_bulleted",
+                "route": "/plan-recuperacion/medidas"
+              },
+              {
+                "displayName": "Objetivos climáticos y digitales",
+                "disabled": false,
+                "iconName": "format_list_bulleted",
+                "route": "/plan-recuperacion/medidas"
+              },
+              {
+                "displayName": "Hitos/Objetivos de la medida",
+                "disabled": false,
+                "iconName": "format_list_bulleted",
+                "route": "/plan-recuperacion/medidas"
+              },
+              {
+                "displayName": "Submedidas",
+                "disabled": false,
+                "iconName": "format_list_bulleted",
+                "route": "/plan-recuperacion/medidas"
+              }
+            ]
+          }
+        ]
+      }
+]

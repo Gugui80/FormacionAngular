@@ -1,0 +1,14 @@
+<p [ngClass]="estilos">privado works!</p>
+<div [ngClass]="divEscapista">
+  Me ves?, y la formación es {{ nombreFormacion }}
+</div>
+
+<p appAppFondoRojo>Soy lightblue!!!!!! (con una directiva)</p>
+
+<div id="tareas">
+    <ul *ngIf="!isLlamativo">
+        <li *ngFor="let tarea of tareas">
+          <span (click)="lanzarTarea(tarea.content)"> Identificador: {{ tarea.id | idTarea: tarea.content }}, Contenido: {{ tarea.content }}</span>
+        </li>
+    </ul>
+</div>

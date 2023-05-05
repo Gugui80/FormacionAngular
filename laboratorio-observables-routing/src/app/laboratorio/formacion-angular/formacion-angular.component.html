@@ -1,0 +1,15 @@
+<div>
+    <p>Nombre de la formación: {{ nombre }}</p>
+    <p>Contador de la formación: {{ contadorFormacion + 2 }} </p>
+    <p>La formación terminó?: {{ finalizada ? 'Si, la formación finalizó': 'Aún no hemos terminado' }}</p>
+    <button
+        id="formacion"
+        [disabled]="buttonDisabled" 
+        (click)="finalizarFormacion($event)">{{ buttonContent }}</button>
+    <article>Tarea capturada: {{ tareaCapturada }}</article>
+</div>
+
+<app-privado
+    [nombreFormacion]="nombre"
+    (contenidoTarea)="capturarTarea($event)"
+></app-privado>
