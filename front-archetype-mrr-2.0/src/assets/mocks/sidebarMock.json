@@ -1,0 +1,465 @@
+[ 
+  {
+    "displayName": "PLAN DE RECUPERACIÓN",
+    "disabled": false,
+    "iconName": "add_circle_outline",
+    "route": null,
+    "children": [
+      {
+        "displayName": "COMPONENTES",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Datos generales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/plan-recuperacion/componentes"
+          }
+        ]
+      },
+      {
+        "displayName": "MEDIDAS",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Datos generales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/plan-recuperacion/medidas"
+          },
+          {
+            "displayName": "Recursos económicos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/plan-recuperacion/medidas"
+          },
+          {
+            "displayName": "Objetivos climáticos y digitales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/plan-recuperacion/medidas"
+          },
+          {
+            "displayName": "Hitos/Objetivos de la medida",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/plan-recuperacion/medidas"
+          },
+          {
+            "displayName": "Submedidas",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/plan-recuperacion/medidas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "displayName": "PLANIFICACIÓN Y GESTIÓN",
+    "disabled": false,
+    "iconName": "add_circle_outline",
+    "route": null,
+    "children": [
+      {
+        "displayName": "PROYECTOS",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Datos generales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Submedidas asociadas",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Objetivos climáticos y digitales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Recursos económicos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Hitos/Objetivos de gestión críticos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Hitos/Objetivos de gestión no críticos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Hitos auxiliares",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Usuarios",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          },
+          {
+            "displayName": "Documentos anexos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/proyectos"
+          }
+        ]
+      },
+      {
+        "displayName": "SUBPROYECTOS",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Datos generales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Submedidas asociadas",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Objetivos climáticos y digitales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Recursos económicos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Hitos/Objetivos de gestión críticos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Hitos/Objetivos de gestión no críticos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Hitos auxiliares",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Usuarios",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          },
+          {
+            "displayName": "Documentos anexos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/subproyectos"
+          }
+        ]
+      },
+      {
+        "displayName": "ACTUACIONES",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Datos generales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Submedidas asociadas",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Objetivos climáticos y digitales",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Recursos económicos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Hitos/Objetivos de gestión críticos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Hitos/Objetivos de gestión no críticos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Ejecución contable",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Hitos auxiliares",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          },
+          {
+            "displayName": "Documentos anexos",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/planificacion/actuaciones"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "displayName": "SEGUIMIENTO DEL PLAN",
+    "disabled": false,
+    "iconName": "add_circle_outline",
+    "route": null,
+    "children": [
+      {
+      "displayName": "SEGUIMIENTO DE COMPONENTES",
+      "disabled": false,
+      "iconName": "",
+      "route": null,
+      "children": [
+        {
+          "displayName": "Informes",
+          "disabled": false,
+          "iconName": "format_list_bulleted"
+        },
+        {
+          "displayName": "Documentos anexos",
+          "disabled": false,
+          "iconName": "format_list_bulleted"
+        }
+      ]
+      },
+      {
+        "displayName": "SEGUIMIENTO DE MEDIDAS",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Informes",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          },
+          {
+            "displayName": "Documentos anexos",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      },
+      {
+        "displayName": "SEGUIMIENTO DE H/O CID",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Datos generales",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          },
+          {
+            "displayName": "Indicadores",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          },
+          {
+            "displayName": "Informes",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          },
+          {
+            "displayName": "Documentos",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "displayName": "PAGOS",
+    "disabled": false,
+    "iconName": "add_circle_outline",
+    "route": null,
+    "children": [
+      {
+        "displayName": "SOLICITUDES DE PAGO",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Solicitudes de pago",
+            "disabled": false,
+            "iconName": "format_list_bulleted",
+            "route": "/pagos/solicitudes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "displayName": "SEGURIDAD",
+    "disabled": false,
+    "iconName": "add_circle_outline",
+    "route": null,
+    "children": [
+      {
+        "displayName": "CARGA DE PERFILES",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Carga de perfiles",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      },
+      {
+        "displayName": "APROBACIÓN DE PERFILADOS",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Aprobación de perfilados",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      },
+      {
+        "displayName": "SOLICITUDES DE RESPONSABLE",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Solicitudes de responsable",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "displayName": "CARGA DE FICHEROS",
+    "disabled": false,
+    "iconName": "add_circle_outline",
+    "route": null,
+    "children": [
+      {
+        "displayName": "CARGA DE PROYECTOS/SUBPROYECTOS",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Carga de proyectos/subproyectos",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      },
+      {
+        "displayName": "DECLARACIONES DE EJECUCIÓN",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Declaraciones de ejecución",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      },
+      {
+        "displayName": "PROGRESO DE INDICADORES",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Progreso de indicadores",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "displayName": "ADMINISTRACIÓN MRR",
+    "disabled": false,
+    "iconName": "add_circle_outline",
+    "route": null,
+    "children": [
+      {
+        "displayName": "PREASIGNACIÓN DE USUARIOS",
+        "disabled": false,
+        "iconName": "",
+        "route": null,
+        "children": [
+          {
+            "displayName": "Preasignación de usuarios",
+            "disabled": false,
+            "iconName": "format_list_bulleted"
+          }
+        ]
+      }
+    ]
+  }
+]

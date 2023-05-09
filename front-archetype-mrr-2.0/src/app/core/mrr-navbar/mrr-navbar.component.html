@@ -1,0 +1,21 @@
+<ul class="navbar-nav">
+    <li class="nav-item dropdown">
+        <a 
+            class="nav-link dropdown-toggle nav-text-color" 
+            role="button" 
+            title="{{titleMenuText}}" 
+            data-bs-toggle="dropdown" 
+            aria-expanded="false"
+            >{{menuItem.displayName}}</a>
+        <ul class="dropdown-menu">
+            <li *ngFor="let menuItemChildren of menuItem.children">
+                <a  
+                    title="{{menuItemChildren.displayName}}" 
+                    class="dropdown-item link-navbar" 
+                    (click)="menuItemSelected(menuItemChildren)"
+                    appClickStopPropagation>{{menuItemChildren.displayName}}</a>
+                <hr class="dropdown-divider">
+            </li>
+        </ul>
+    </li>
+</ul>

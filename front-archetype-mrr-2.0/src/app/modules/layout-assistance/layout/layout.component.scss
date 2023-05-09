@@ -1,0 +1,19 @@
+.pagina-container {
+    background-color: #f4f5f9;
+    box-shadow: inset 5px 1px 5px -2px #c3b8b8;
+    min-height: calc(100vh - 106px);
+}
+
+.sidebar-container {
+    min-height: calc(100vh - 106px);
+    padding-right: 0%;
+}
+
+.info-container {
+    min-height: calc(100vh - 106px);
+    padding-left: 0;
+}
+
+.detail-container {
+    padding-left: 0;
+}

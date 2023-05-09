@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col col-lg-12 col-md-12">
+
+        <ng-content select="app-header"></ng-content>
+        
+      </div>
+    </div>
+    <main class="pagina-container">
+        <div class="row">
+            
+            <div class="col col-md-3 col-lg-3 col-sm-3 sidebar-container">
+            
+                <ng-content select="app-sidebar"></ng-content>
+
+            </div>
+            <div class="col col-md-9 col-lg-9 col-sm-9 info-container">
+                <div class="row">
+
+                    <ng-content select="app-mrr-breadcrumbs"></ng-content>
+
+                </div>
+                <div class="row">
+
+                    <ng-content select="app-content"></ng-content>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col col-md-3 col-lg-3 col-sm-3"></div>
+            <div class="col col-md-6 col-lg-6 col-sm-6" style="text-align: center;">
+
+                <ng-content select="app-footer"></ng-content>
+
+            </div>
+            <div class="col col-md-3 col-lg-3 col-sm-3"></div>
+        </div>
+    </main>
+</div>

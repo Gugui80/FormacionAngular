@@ -1,0 +1,25 @@
+:host {
+  .active {
+    background-color: var(--bs-link-color);
+  }
+  &:hover, &:focus {
+    >a:not(.expanded) {
+      background-color: #dfe0fd;
+    }
+  }
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+      background-color: #efeff3;
+    }
+}
+
+.enrutador {
+    cursor: pointer;
+}
+
+.icon-sidebar {
+    vertical-align: text-bottom;
+}

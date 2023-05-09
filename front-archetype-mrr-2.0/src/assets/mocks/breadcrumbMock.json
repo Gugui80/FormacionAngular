@@ -1,0 +1,42 @@
+[
+    {
+        "label":"Componentes",
+        "url": "/plan-recuperacion/componentes"
+    },
+    {
+        "label":"Plan de recuperación",
+        "url": "/plan-recuperacion/componentes"
+    },
+    {
+        "label":"Medidas",
+        "url": "/plan-recuperacion/medidas"
+    },
+    {
+        "label":"Plan de recuperación",
+        "url": "/plan-recuperacion/medidas"
+    },
+    {
+        "label":"Proyectos",
+        "url": "/planificacion/proyectos"
+    },
+    {
+        "label":"Planificación y gestión",
+        "url": "/planificacion/proyectos"
+    },
+    {
+        "label":"Subproyectos",
+        "url": "/plan-recuperacion/subproyectos"
+    },
+    {
+        "label":"Planificación y gestión",
+        "url": "/planificacion/subproyectos"
+    },
+    {
+        "label":"Actuaciones",
+        "url": "/plan-recuperacion/medidas"
+    },
+    {
+        "label":"Planificación y gestión",
+        "url": "/planificacion/actuaciones"
+    }
+]

@@ -1,0 +1,27 @@
+<!-- Elemento individual de menú -->
+<a
+  [ngStyle]="{'padding-left': ('5px')}"
+  [ngClass]="{'active': opcionMenu.route ? router.isActive(opcionMenu.route, true): false, 'expanded': expanded}"
+  class="nav-link text-dark enrutador" 
+  (click)="isExpanded(opcionMenu)"
+  title="{{opcionMenu.displayName}}">
+  <span *ngIf="isMenuExpanded">
+    <i class="material-icons icon-sidebar">{{opcionMenu.iconName}}</i>
+  </span>
+    {{opcionMenu.displayName}}
+  <span *ngIf="opcionMenu.children && opcionMenu.children.length">
+    <i class="material-icons icon-sidebar"
+    [@indicatorRotate]="expanded ? 'expanded' : 'collapsed'">expand_more</i>
+  </span>
+</a>
+<!-- Posible lista de elementos hijos de un punto de menú -->
+<div *ngIf="expanded && isMenuExpanded">
+  <ul class="list-group list-group-flush flex-column">
+    <li class="list-group-item" *ngFor="let opcionMenuSecundario of opcionMenu.children">
+      <app-mrr-sidebar
+      [menuItemSelected]="menuItemSelected"
+      [opcionMenu]="opcionMenuSecundario"
+      [isMenuExpanded]="isMenuExpanded"></app-mrr-sidebar>
+    </li>
+  </ul>
+</div>

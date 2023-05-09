@@ -1,0 +1,35 @@
+<div class="flex-column flex-shrink-0 p-3 bg-light sidebar" >
+  <button
+        type="button"
+        aria-label="Toogle sidenav"
+        (click)="toggleSidenav()"
+        [disabled]="!showSidebar">
+        <i class="material-icons icon-sidebar" aria-label="Side nav toggle icon">menu</i>
+      </button>
+    <a href="/" class="align-items-left text-decoration-none">
+      <!--<i class="material-icons icon-sidebar">assignment</i>-->
+      <span class="fs-4">{{menuItemSelected}}</span>
+    </a>
+    <!--<mat-sidenav-container autosize>
+      <mat-sidenav
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="((isLandscape$ | async)|| (isHandset$ | async))">-->
+        <div class="input-group mb-3" *ngIf="isMenuExpanded" >
+          <input type="text" class="form-control" placeholder="Buscar" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <button class="btn btn-primary" type="button" id="button-addon2">
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+        <hr>
+        <ul *ngIf="isMenuExpanded"  class="list-group list-group-flush flex-column mb-auto align-items-left">
+            <li class="list-group-item" *ngFor="let opcionMenu of listSidebarItems[0].children">
+            <app-mrr-sidebar
+                [menuItemSelected]="menuItemSelected"
+                [opcionMenu]="opcionMenu"
+                [isMenuExpanded]="isMenuExpanded"></app-mrr-sidebar>
+            </li>
+        </ul>
+      <!--</mat-sidenav>
+    </mat-sidenav-container>-->
+</div>

@@ -1,0 +1,23 @@
+<div class="conatiner float-end toolbar-container">
+    <div *ngIf="allowedActions">
+        <button 
+            type="button" 
+            class="btn btn-primary active" 
+            aria-current="page"
+            (click)="add()" 
+            appCanCreateEntity="true">Nuevo</button>
+        <button 
+            type="button" 
+            class="btn btn-warning"
+            (click)="edit()"
+            appCanEditEntity>Editar</button>
+        <button 
+            type="button" 
+            class="btn btn-danger"
+            (click)="delete()"
+            appCanDelete>Eliminar</button>
+    </div>
+    Current state: {{ toolbar.state }}<br>
+    Current action: {{ toolbar.action }}<br>
+    Current entity: {{ toolbar.entity }}
+</div>

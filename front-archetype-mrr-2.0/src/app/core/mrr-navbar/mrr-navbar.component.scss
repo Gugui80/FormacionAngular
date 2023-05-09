@@ -1,0 +1,19 @@
+li > a:nth-child(1){
+    :active {
+        background-color: #dc1522;
+    }
+    &:hover, &:focus {
+        background-color: #dc1522;
+    }
+}
+.activo {
+    background-color: #dc1522;
+}
+
+.nav-text-color {
+    color: white;
+}
+
+.link-navbar {
+    cursor: pointer;
+}

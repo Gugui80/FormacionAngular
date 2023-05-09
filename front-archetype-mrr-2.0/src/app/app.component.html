@@ -1,0 +1,30 @@
+  <!--COMPONENTE CONTENEDOR DE LA APLICACIÓN-->
+  <app-layout>
+    <app-header
+    [listMenuItems]="listMenuItems"
+    (optionMenuSelected)="procesarOpcionMenu($event)"></app-header>
+    
+    <app-sidebar
+    (contractOrExpandSidebaButtonClicked) = "expandirContraerSidebar($event)"
+    [showSidebar]="showToolbar"
+    [menuItemSelected]="opcionMenuSeleccionada"
+    [listSidebarItems]="listSidebarItems"
+    [isMenuExpanded]="isExpanded"></app-sidebar>
+    
+    <app-mrr-breadcrumbs
+    [showBreadCrumbs]="showToolbar"
+    [listBreadcrumbItems]="listBreadcrumbItems"></app-mrr-breadcrumbs>
+    <app-content>
+      
+      <app-toolbar
+      [allowedActions]="showToolbar"></app-toolbar>
+      
+      <!-- Contenedor donde se van a inyectar los elementos de la navegación -->
+      <router-outlet></router-outlet>
+      
+    </app-content>
+    
+    <app-footer></app-footer>
+  </app-layout>
+  <!--Contenedor de los toaster de aviso al usuario-->
+  <app-mrr-toaster aria-live="polite" aria-atomic="true"></app-mrr-toaster>
