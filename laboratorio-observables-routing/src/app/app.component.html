@@ -1,6 +1,38 @@
 <h2>Laboratorio de angular {{ title }}</h2>
 <div>
     <p>Que día es hoy?: <strong>{{ diaDeHoy | date: 'MMMM d, y, h:mm:ss a z' }}</strong></p>
+    <div id="menuNavegacion">
+        <nav>
+            <ul>
+                <li>
+                    <a 
+                        routerLink="/" 
+                        routerLinkActive="rutaActiva" 
+                        [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+                <li>
+                    <a 
+                        routerLink="/laboratorio/formacion" 
+                        routerLinkActive="rutaActiva">Formacion-Angular (sin parámetros)</a>
+                </li>
+                <li>
+                    <a 
+                        [routerLink]="['/laboratorio/formacion', 'ruta1']" 
+                        routerLinkActive="rutaActiva">Formacion-Angular (con parámetros en la url)</a>
+                </li>
+                <li>
+                    <a 
+                        routerLink="/laboratorio/privado" 
+                        routerLinkActive="rutaActiva">Privado</a>
+                </li>
+                <li>
+                    <a 
+                        routerLink="/asincronia/laboratorio-observables" 
+                        routerLinkActive="rutaActiva">Observables</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
 
 <router-outlet></router-outlet>

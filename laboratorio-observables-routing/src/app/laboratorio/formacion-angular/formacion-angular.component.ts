@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-formacion-angular',
@@ -14,13 +15,25 @@ export class FormacionAngularComponent implements OnInit {
   buttonDisabled: boolean = false;
   diaDeHoy: Date = new Date();
   tareaCapturada: string = '';
+  urlFormacion: string = '';
 
-  constructor() {
+  constructor(
+    public activatedRoute: ActivatedRoute
+  ) {
     this.contadorFormacion = 7;
     this.finalizada = true;
   }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(
+      (parametrosPath: Params) => {
+        if (parametrosPath['tipoFormacion']) {
+          this.urlFormacion = parametrosPath['tipoFormacion'];
+        } else {
+          this.urlFormacion = 'Ningún parámetro pasado en la url';
+        }
+      }
+    );
   }
 
   finalizarFormacion(event: any): void {

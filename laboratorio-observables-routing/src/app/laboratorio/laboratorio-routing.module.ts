@@ -5,6 +5,7 @@ import { PrivadoComponent } from './privado/privado.component';
 
 const routes: Routes = [
     { path: 'formacion', component: FormacionAngularComponent },
+    { path: 'formacion/:tipoFormacion', component: FormacionAngularComponent },
     { path: 'privado', component: PrivadoComponent }];
 
 @NgModule({
